@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from 'fs';
 
 const numbers = {
   one: 1,
@@ -14,7 +14,7 @@ const numbers = {
 
 function main() {
   // Create an array to parse through each line
-  const textArray = fs.readFileSync("input.txt").toString().split("\n");
+  const textArray = fs.readFileSync('input.txt').toString().split('\n');
   const strings = [];
 
   // Add keys to strings array
@@ -62,13 +62,13 @@ function main() {
     }
 
     // Combine the first number and the last from the array
-    const finalNumber = `${numOne}${numTwo ? numTwo : ""}`;
+    const finalNumber = `${numOne}${numTwo ? numTwo : ''}`;
 
     // Add to the sum
     count += Number(finalNumber);
   });
 
-  console.log("Sum of calibration values:", count);
+  console.log('Sum of calibration values:', count);
 }
 
 main();

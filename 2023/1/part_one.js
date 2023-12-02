@@ -1,8 +1,8 @@
-import * as fs from "fs";
+import * as fs from 'fs';
 
 function main() {
   // Create an array to parse through each line
-  const textArray = fs.readFileSync("input.txt").toString().split("\n");
+  const textArray = fs.readFileSync('input.txt').toString().split('\n');
 
   let count = 0;
 
@@ -24,7 +24,7 @@ function main() {
     count += Number(finalNumber);
   });
 
-  console.log("Sum of calibration values:", count);
+  console.log('Sum of calibration values:', count);
 }
 
 main();
