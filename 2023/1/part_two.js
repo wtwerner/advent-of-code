@@ -42,8 +42,6 @@ function main() {
       }
     }
 
-    const numberArray = [];
-
     // Add first and last substring to numberArray
     let numOne = substringArray[0];
     let numTwo = substringArray.pop();
