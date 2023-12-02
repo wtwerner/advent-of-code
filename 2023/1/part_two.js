@@ -45,11 +45,8 @@ function main() {
     const numberArray = [];
 
     // Add first and last substring to numberArray
-    numberArray[0] = substringArray[0];
-    numberArray[1] = substringArray.pop();
-
-    let numOne = numberArray[0];
-    let numTwo = numberArray[1];
+    let numOne = substringArray[0];
+    let numTwo = substringArray.pop();
 
     // Get the value if numOne is a key
     if (numOne in numbers) {
