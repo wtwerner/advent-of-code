@@ -5,7 +5,7 @@ function main() {
   const input = fs.readFileSync('input.txt').toString().split('\n');
 
   // The available cubes each game
-  const cubes = {
+  const availableCubes = {
     red: 12,
     green: 13,
     blue: 14,
@@ -20,7 +20,7 @@ function main() {
     let possible = true;
 
     for (const draw of draws) {
-      const blocks = {};
+      const cubes = {};
 
       const colors = draw.split(', ');
 
@@ -28,11 +28,12 @@ function main() {
         const cubeColor = color.split(' ')[1];
         const cubeCount = color.split(' ')[0];
 
-        blocks[cubeColor] = cubeCount;
+        cubes[cubeColor] = cubeCount;
       }
 
-      for (const [k, v] of Object.entries(blocks)) {
-        if (v > cubes[k]) {
+      // Check if the drawn cubes exceed the available cubes
+      for (const [k, v] of Object.entries(cubes)) {
+        if (v > availableCubes[k]) {
           possible = false;
         }
       }
@@ -43,7 +44,7 @@ function main() {
     }
   }
 
-  console.log(sumOfIds);
+  console.log('The sum of the impossible game IDs is:', sumOfIds);
 }
 
 main();
