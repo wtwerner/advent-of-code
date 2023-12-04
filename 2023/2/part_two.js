@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 
 function main() {
+  console.time('day_two_part_two');
+
   // Create an array to parse through each line
   const input = fs.readFileSync('input.txt').toString().split('\n');
 
@@ -34,6 +36,7 @@ function main() {
     sumOfPower += power;
   }
 
+  console.timeEnd('day_two_part_two');
   console.log('The sum of the powers is:', sumOfPower);
 }
 

@@ -13,6 +13,8 @@ const numbers = {
 };
 
 function main() {
+  console.time('day_one_part_two');
+
   // Create an array to parse through each line
   const textArray = fs.readFileSync('input.txt').toString().split('\n');
   const strings = [];
@@ -63,6 +65,7 @@ function main() {
     count += Number(finalNumber);
   });
 
+  console.timeEnd('day_one_part_two');
   console.log('Sum of calibration values:', count);
 }
 

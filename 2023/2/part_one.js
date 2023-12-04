@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 
 function main() {
+  console.time('day_two_part_one');
+
   // Create an array to parse through each line
   const input = fs.readFileSync('input.txt').toString().split('\n');
 
@@ -44,6 +46,7 @@ function main() {
     }
   }
 
+  console.timeEnd('day_two_part_one');
   console.log('The sum of the impossible game IDs is:', sumOfIds);
 }
 
