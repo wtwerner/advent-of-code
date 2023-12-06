@@ -8,4 +8,4 @@ Here are my solutions for the [Advent of Code](https://adventofcode.com) challen
 |---|---|---|
 | 1 | 2.563ms | 6.198ms |
 | 2 | 1.872ms |  1.351ms |
-| 3 |   |   |
+| 3 | 8.836ms |   |
